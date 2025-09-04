@@ -1,0 +1,103 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+:root {
+  --header-h: 80px;
+  --footer-h: 50px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.header-nav {
+  background-color: rgba(175, 67, 67, 1);
+  color: rgb(255, 255, 255);
+}
+
+/* Fixed header positioning - stays at top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add padding to body to prevent content from hiding behind fixed header */
+body {
+  margin: 0;
+  padding-top: var(--header-h);
+}
+.content {
+  min-height: calc(100vh - var(--header-h) - var(--footer-h));
+  padding-top: 20px;
+  padding-bottom: calc(20px + var(--footer-h));
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(175, 67, 67, 1);
+  width: min(90vw, 700px);
+  height: clamp(380px, 65vh, 560px);
+  margin: 20px 0;
+  overflow-y: auto;
+}
+.footer{
+  background-color: rgba(255, 98, 0, 0.499);
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--footer-h);
+  text-align: center;
+  z-index: 2000;
+}
